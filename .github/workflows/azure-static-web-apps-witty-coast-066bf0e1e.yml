@@ -30,7 +30,9 @@ jobs:
     output_location: "dist" # adjust if needed
 Let me know if you'd like help correcting your full workflow file!
 
-
+env:
+  skip_deploy_on_missing_secrets: true
+  
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
